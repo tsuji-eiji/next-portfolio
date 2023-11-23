@@ -1,8 +1,12 @@
+import Link from "next/link";
+
 export default async function StaticPage() {
 
   return (
     <header>
-      <h1 className="text-center">TITLE</h1>
+      <Link href={'/'}>
+        <h1 className="text-center">TITLE</h1>
+      </Link>
     </header>
   );
 }

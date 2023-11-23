@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getCategories } from "../../lib/microcms";
 
 export default async function StaticPage() {
@@ -27,7 +28,7 @@ export default async function StaticPage() {
           } else {
             return (
               <li key={category.id}>
-                <p>{category.name}</p>
+                <Link href={`/category/${category.id}`}>{category.name}</Link>
               </li>
             );
           }
