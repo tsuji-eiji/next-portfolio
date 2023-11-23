@@ -14,19 +14,19 @@ export default async function StaticPage() {
   }
 
   return (
-    <div>
-      <h2>カテゴリ一覧</h2>
-      <ul>
+    <div className="category-links">
+      <h2 className="text-center">カテゴリ一覧</h2>
+      <ul className="px-4">
         {categories.map((category) => {
           if (category.parent === null) {
             return (
-              <li className="bg-gray-800" key={category.id}>
+              <li key={category.id}>
                 <p>{category.name}</p>
               </li>
             );
           } else {
             return (
-              <li className="bg-gray-400" key={category.id}>
+              <li key={category.id}>
                 <p>{category.name}</p>
               </li>
             );

@@ -1,0 +1,13 @@
+.article {
+  margin: 1em;
+  padding: .5em;
+  border: black solid 1px;
+  border-radius: .5em;
+}
+
+.category-links {
+  margin: 1em;
+  padding: .5em;
+  border: black solid 1px;
+  border-radius: .5em; 
+}

@@ -7,9 +7,15 @@ export default async function StaticPage() {
   const { contents } = await getList();
 
   return (
-    <main>
-      <ArticleList contents={contents} />
-      <CategoryLinks />
-    </main>
+    <>
+      <main className="flex justify-center mx-48">
+        <div className="w-3/4">
+          <ArticleList contents={contents} />
+        </div>
+        <div className="w-1/4">
+          <CategoryLinks />
+        </div>
+      </main>
+    </>
   );
 }
