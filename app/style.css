@@ -11,3 +11,28 @@
   border: black solid 1px;
   border-radius: .5em; 
 }
+
+.word-search {
+  margin: 1em;
+  padding: .5em;
+  border: black solid 1px;
+  border-radius: .5em; 
+}
+
+.word-search input {
+  border: black solid 1px;
+  border-radius: .5em; 
+  padding: .25em;
+  width: 100%;
+  
+}
+
+.word-search form {
+  position: relative;
+}
+
+.word-search .search-icon {
+  position: absolute;
+  top: 30px;
+  right: 7px;
+}

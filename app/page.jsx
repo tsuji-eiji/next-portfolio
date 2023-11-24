@@ -3,9 +3,11 @@ import { getList } from "../lib/microcms";
 import Header from "./component/Header";
 import ArticleList from "./component/ArticleList";
 import CategoryLinks from "./component/CategoryLinks";
+import WordSearch from "./component/WordSearch";
 
-export default async function StaticPage() {
-  const { contents } = await getList();
+export default async function StaticPage({searchParams}) {
+  
+  const { contents } = await getList(searchParams);
 
   return (
     <>
@@ -15,6 +17,7 @@ export default async function StaticPage() {
           <ArticleList contents={contents} />
         </div>
         <div className="w-1/4">
+          <WordSearch />
           <CategoryLinks />
         </div>
       </main>
