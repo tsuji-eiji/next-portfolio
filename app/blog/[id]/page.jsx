@@ -1,32 +1,23 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
-import { getDetail, getList } from "../../../lib/microcms";
+import Header from "../../component/Header";
+import { getDetail } from "../../../lib/microcms";
 
-export async function generateStaticParams() {
-  const { contents } = await getList();
 
-  const paths = contents.map((post) => {
-    return {
-      id: post.id,
-    };
-  });
-
-  return [...paths];
-}
-
-export default async function StaticDetailPage({
-  params: { id },
-}) {
-  const post = await getDetail(id);
+export default async function StaticPage({params}) {
+  const post = await getDetail(params.id);
 
   if (!post) {
     notFound();
   }
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <div>{parse(post.content)}</div>
-    </div>
+    <>
+      <Header />
+      <main className="container m-auto p-4">
+        <h2>{post.title}</h2>
+        <div>{parse(post.content)}</div>
+      </main>
+    </>
   );
 }

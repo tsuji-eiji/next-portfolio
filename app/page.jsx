@@ -12,11 +12,11 @@ export default async function StaticPage({searchParams}) {
   return (
     <>
       <Header />
-      <main className="flex justify-center mx-48">
-        <div className="w-3/4">
+      <main className="container lg:flex lg:justify-center m-auto">
+        <div className="lg:w-3/4">
           <ArticleList contents={contents} />
         </div>
-        <div className="w-1/4">
+        <div className="lg:w-1/4">
           <WordSearch />
           <CategoryLinks />
         </div>
