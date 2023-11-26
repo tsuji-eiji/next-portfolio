@@ -24,7 +24,7 @@ export default function StaticPage() {
         <input id="q" onChange={inputChange} type="text" />
         <input name="q" type="hidden" />
         <button className="search-icon">
-          <Image src={'search.svg'} width={24} height={24} alt="検索ボタン" />
+          <Image src={'/search.svg'} width={24} height={24} alt="検索ボタン" />
         </button>
       </form>
     </div>

@@ -4,6 +4,7 @@ import Header from "./component/Header";
 import ArticleList from "./component/ArticleList";
 import CategoryLinks from "./component/CategoryLinks";
 import WordSearch from "./component/WordSearch";
+import MonthlyArchive from "./component/MonthlyArchive";
 
 export default async function StaticPage({searchParams}) {
   
@@ -19,6 +20,7 @@ export default async function StaticPage({searchParams}) {
         <div className="lg:w-1/4">
           <WordSearch />
           <CategoryLinks />
+          <MonthlyArchive />
         </div>
       </main>
     </>
