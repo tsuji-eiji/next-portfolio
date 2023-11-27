@@ -3,6 +3,13 @@ import parse from "html-react-parser";
 import Header from "../../component/Header";
 import { getDetail } from "../../../lib/microcms";
 
+export async function generateMetadata({ params, searchParams }) {
+  const post = await getDetail(params.id);
+  let meta = {};
+  meta.title = post.title + " - TECH 24";
+
+  return meta;
+}
 
 export default async function StaticPage({params}) {
   const post = await getDetail(params.id);

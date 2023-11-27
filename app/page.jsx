@@ -6,6 +6,18 @@ import CategoryLinks from "./component/CategoryLinks";
 import WordSearch from "./component/WordSearch";
 import MonthlyArchive from "./component/MonthlyArchive";
 
+export async function generateMetadata({ params, searchParams }) {
+  let meta = {};
+  // 検索ワードの有無でタイトルを変更
+  if (searchParams.q === undefined) {
+    meta.title = 'TECH 24';
+  } else {
+    meta.title = `「${searchParams.q}」の検索結果 - TECH 24`;
+  }
+
+  return meta;
+}
+
 export default async function StaticPage({searchParams}) {
   
   const { contents } = await getList(searchParams);

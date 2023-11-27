@@ -6,6 +6,15 @@ import CategoryLinks from "../../component/CategoryLinks";
 import WordSearch from "../../component/WordSearch";
 import MonthlyArchive from "../../component/MonthlyArchive";
 
+export async function generateMetadata({ params, searchParams }) {
+  const date = params.date;
+  let meta = {};
+  meta.title = date.split("_")[0] + "年" + date.split("_")[1] + "月の記事一覧 - TECH 24";
+
+  return meta;
+}
+
+
 export default async function StaticPage({params: {date}}) {
   // クエリパラメータから年と月を取得
   const year = date.split("_")[0];
