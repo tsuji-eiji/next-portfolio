@@ -28,7 +28,7 @@ export default async function StaticPage() {
           } else {
             return (
               <li key={category.id}>
-                <Link href={`/category/${category.id}`}>{category.name}</Link>
+                <Link className="ml-4" href={`/category/${category.id}`}>{category.name}</Link>
               </li>
             );
           }
