@@ -20,19 +20,19 @@ export async function generateMetadata({ params, searchParams }) {
 
 export default async function StaticPage({searchParams}) {
   
-  // const { contents } = await getList(searchParams);
+  const { contents } = await getList(searchParams);
 
   return (
     <>
       <Header />
       <main className="container lg:flex lg:justify-center m-auto">
         <div className="lg:w-3/4">
-          {/* <ArticleList contents={contents} /> */}
+          <ArticleList contents={contents} />
         </div>
         <div className="lg:w-1/4">
-          <WordSearch />
+          {/* <WordSearch />
           <CategoryLinks />
-          <MonthlyArchive />
+          <MonthlyArchive /> */}
         </div>
       </main>
     </>
