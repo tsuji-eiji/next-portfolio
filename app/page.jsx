@@ -31,7 +31,7 @@ export default async function StaticPage({searchParams}) {
         </div>
         <div className="lg:w-1/4">
           <WordSearch />
-          {/* <CategoryLinks /> */}
+          <CategoryLinks />
           <MonthlyArchive />
         </div>
       </main>
