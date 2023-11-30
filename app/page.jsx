@@ -30,9 +30,9 @@ export default async function StaticPage({searchParams}) {
           <ArticleList contents={contents} />
         </div>
         <div className="lg:w-1/4">
-          {/* <WordSearch />
-          <CategoryLinks />
-          <MonthlyArchive /> */}
+          <WordSearch />
+          {/* <CategoryLinks /> */}
+          <MonthlyArchive />
         </div>
       </main>
     </>
