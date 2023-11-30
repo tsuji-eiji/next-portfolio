@@ -2,18 +2,19 @@ import Link from "next/link";
 import { getCategories } from "../../lib/microcms";
 
 export default async function StaticPage() {
-  // const categories = [];
-  // 親カテゴリを抽出
-  const categories = await getCategories();
-  // const parents = await getCategories({ filters: 'parent[not_exists]' });
-  // for (const parent of parents) {
-  //   // 出力用リストに親カテゴリを追加
-  //   categories.push(parent);
-  //   // 子カテゴリを抽出
-  //   const children = await getCategories({ filters: 'parent[equals]' + parent.id });
-  //   // 出力用リストに子カテゴリを追加
-  //   children.forEach(child => {categories.push(child)});
-  // }
+  // 全カテゴリを抽出
+  let categories = [];
+  const all = await getCategories();
+  const parents = all.filter((category) => category.parent === null)
+  // console.log(parents);
+  parents.forEach((parent) => {
+    categories.push(parent);
+    all.forEach(element => {
+      if (element.parent !== null && element.parent.id === parent.id) {
+        categories.push(element);
+      }
+    });
+  })
 
   return (
     <div className="category-links">
