@@ -1,3 +1,10 @@
+.area-border {
+  margin: 1em;
+  padding: .5em;
+  border: black solid 1px;
+  border-radius: .5em; 
+}
+
 .article {
   margin: 1em;
   padding: .5em;

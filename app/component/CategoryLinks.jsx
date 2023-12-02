@@ -6,7 +6,7 @@ export default async function StaticPage() {
   let categories = [];
   const all = await getCategories();
   const parents = all.filter((category) => category.parent === null)
-  // console.log(parents);
+  
   parents.forEach((parent) => {
     categories.push(parent);
     all.forEach(element => {
