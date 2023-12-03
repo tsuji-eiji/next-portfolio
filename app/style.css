@@ -2,51 +2,22 @@
   margin: 1em;
   padding: .5em;
   border: black solid 1px;
-  border-radius: .5em; 
-}
-
-.article {
-  margin: 1em;
-  padding: .5em;
-  border: black solid 1px;
   border-radius: .5em;
 }
 
-.category-links {
-  margin: 1em;
-  padding: .5em;
+.word-search-form input {
   border: black solid 1px;
-  border-radius: .5em; 
-}
-
-.word-search {
-  margin: 1em;
-  padding: .5em;
-  border: black solid 1px;
-  border-radius: .5em; 
-}
-
-.word-search input {
-  border: black solid 1px;
-  border-radius: .5em; 
+  border-radius: .5em;
   padding: .25em;
   width: 100%;
-  
 }
 
-.word-search form {
+.word-search-form {
   position: relative;
 }
 
-.word-search .search-icon {
+.word-search-form .search-icon {
   position: absolute;
   top: 30px;
   right: 7px;
-}
-
-.monthly-archive {
-  margin: 1em;
-  padding: .5em;
-  border: black solid 1px;
-  border-radius: .5em; 
 }

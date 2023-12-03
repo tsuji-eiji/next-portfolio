@@ -7,7 +7,7 @@ export default async function StaticPage() {
   const monthlyArchives = groupBy(data);
 
   return (
-    <div className="monthly-archive">
+    <div className="area-border">
       <h2 className="text-center">月別</h2>
       <ul>
           {Object.keys(monthlyArchives).map((index) => {

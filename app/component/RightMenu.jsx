@@ -7,10 +7,10 @@ export default async function StaticPage({searchParams}) {
   
   return (
     <div className="lg:w-1/4">
-      <ProfileIndex />
       <WordSearch />
       <CategoryLinks />
       <MonthlyArchive />
+      <ProfileIndex />
     </div>
   );
 }
