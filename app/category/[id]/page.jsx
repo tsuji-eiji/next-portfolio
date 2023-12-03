@@ -2,9 +2,7 @@ import Link from "next/link";
 import { getList, getCategoryDetail } from "../../../lib/microcms"
 import Header from "../../component/Header";
 import ArticleList from "../../component/ArticleList";
-import CategoryLinks from "../../component/CategoryLinks";
-import WordSearch from "../../component/WordSearch";
-import MonthlyArchive from "../../component/MonthlyArchive";
+import RightMenu from "../../component/RightMenu";
 
 export async function generateMetadata({ params, searchParams }) {
   const category = await getCategoryDetail(params.id);
@@ -24,11 +22,7 @@ export default async function StaticPage({params: {id}}) {
         <div className="lg:w-3/4">
           <ArticleList contents={contents} />
         </div>
-        <div className="lg:w-1/4">
-          <WordSearch />
-          <CategoryLinks />
-          <MonthlyArchive />
-        </div>
+        <RightMenu />
       </main>
     </>
   );
