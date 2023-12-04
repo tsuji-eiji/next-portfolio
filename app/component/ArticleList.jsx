@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default async function StaticPage({contents}) {
+export default async function StaticPage({list}) {
+  const contents = list.contents;
   if (!contents || contents.length === 0) {
     return (
       <div>

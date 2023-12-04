@@ -13,14 +13,14 @@ export async function generateMetadata({ params, searchParams }) {
 }
 
 export default async function StaticPage({params: {id}}) {
-  const { contents } = await getList({filters: `category[equals]${id}`});
+  const list = await getList({filters: `category[equals]${id}`});
 
   return (
     <>
       <Header />
       <main className="container lg:flex lg:justify-center m-auto">
         <div className="lg:w-3/4">
-          <ArticleList contents={contents} />
+          <ArticleList list={list} />
         </div>
         <RightMenu />
       </main>

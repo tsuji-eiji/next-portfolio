@@ -25,7 +25,7 @@ export default async function StaticPage({params: {date}}) {
   // filtersクエリで該当月の記事のみを取得
   const filters = `publishedAt[greater_than]${startOfMonth.toISOString()}[and]publishedAt[less_than]${endOfMonth.toISOString()}`;
 
-  const { contents } = await getList({filters: filters});
+  const list = await getList({filters: filters});
 
   return (
     <>
@@ -33,7 +33,7 @@ export default async function StaticPage({params: {date}}) {
       <main className="container lg:flex lg:justify-center m-auto">
         <div className="lg:w-3/4">
           <h2>{date.split("_")[0] + "年" + date.split("_")[1] + "月"}の記事</h2>
-          <ArticleList contents={contents} />
+          <ArticleList list={list} />
         </div>
         <RightMenu />
       </main>
