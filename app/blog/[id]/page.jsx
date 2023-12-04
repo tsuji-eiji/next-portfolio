@@ -21,9 +21,9 @@ export default async function StaticPage({params}) {
   return (
     <>
       <Header />
-      <main className="container m-auto p-4">
-        <h2>{post.title}</h2>
-        <div>{parse(post.content)}</div>
+      <main className="container m-auto max-w-max">
+        <h1 className="text-center text-3xl my-2 lg:my-8">{post.title}</h1>
+        <div className="blog-article">{parse(post.content)}</div>
       </main>
     </>
   );

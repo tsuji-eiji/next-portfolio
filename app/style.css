@@ -1,3 +1,4 @@
+/* 一覧ページ */
 .area-border {
   margin: 1em;
   padding: .5em;
@@ -20,4 +21,76 @@
   position: absolute;
   top: 30px;
   right: 7px;
+}
+
+.profile-link {
+  text-decoration: underline;
+}
+
+/* ブログ記事詳細ページ */
+.blog-article {
+
+  padding: .5rem;
+
+  & h1 {
+    font-size: 1.8rem;
+    margin: .5rem 0;
+    text-decoration: underline;
+  }
+
+  & h2 {
+    font-size: 1.6rem;
+    margin: .5rem 0;
+    text-decoration: underline;
+  }
+
+  & h3 {
+    font-size: 1.4rem;
+    margin: .5rem 0;
+    text-decoration: underline;
+  }
+
+  & h4 {
+    font-size: 1.2rem;
+    margin: .5rem 0;
+    text-decoration: underline;
+  }
+
+  & h5 {
+    margin: .5rem 0;
+    text-decoration: underline;
+  }
+
+  & pre,
+  & p code  {
+    margin: .75rem 0;
+    background: black;
+    color: white;
+    padding: .5rem;
+    overflow: auto;
+    white-space: pre;
+    font-size: .75em;
+    border-radius: .5rem;
+  }
+
+  & blockquote {
+    background: rgb(200, 200, 200);
+    padding: .5rem;
+    font-style: oblique;
+  }
+
+  & table {
+    margin: .5rem;
+  }
+
+  & th,
+  & td {
+    border: rgb(80, 80, 80) .5px solid;
+    padding: .25rem;
+  }
+
+  & a {
+    color: rgb(0, 165, 248);
+    text-decoration: underline;
+  }
 }

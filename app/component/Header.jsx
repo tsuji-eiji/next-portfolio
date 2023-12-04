@@ -11,7 +11,7 @@ const archivo = Archivo({
 export default async function StaticPage() {
   return (
     <header className={archivo.className}>
-      <h1 className="text-center text-6xl py-4">
+      <h1 className="text-center text-6xl lg:text-7xl py-4">
         <Link href={"/"}>TECH 24</Link>
       </h1>
     </header>
