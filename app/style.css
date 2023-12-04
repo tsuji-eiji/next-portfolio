@@ -27,6 +27,20 @@
   text-decoration: underline;
 }
 
+dl {
+  & dt {
+    margin-top: 1rem;
+  }
+
+  & dt::after {
+    content: ":";
+  }
+
+  & dd {
+    margin-left: 1rem;
+  }
+}
+
 /* ブログ記事詳細ページ */
 .blog-article {
 
@@ -63,7 +77,7 @@
 
   & pre,
   & p code  {
-    margin: .75rem 0;
+    margin: 1rem 0;
     background: black;
     color: white;
     padding: .5rem;
@@ -92,5 +106,24 @@
   & a {
     color: rgb(0, 165, 248);
     text-decoration: underline;
+  }
+
+  & img {
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* プロフィール詳細 */
+.profile-img {
+  max-width: 50%;
+}
+
+/* PC用CSS */
+@media screen and (min-width: 1024px) {
+  /* プロフィール詳細 */
+  .profile-img {
+    max-width: 25%;
   }
 }

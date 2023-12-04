@@ -33,16 +33,16 @@ export default async function StaticPage() {
   return (
     <>
       <Header />
-      <main className="container m-auto w-1/2 lg:w-1/3 p-4">
-        <h2 className="text-center">Profile</h2>
-        <div className="relative aspect-square m-auto">
+      <main className="container m-auto p-4 profile-detail">
+        <h2 className="text-center text-3xl my-2">Profile</h2>
+        <div className="profile-img relative aspect-square m-auto">
           <Image
             src={"/profile.png"}
             layout="fill"
             className="object-contain"
           />
         </div>
-        <dl>
+        <dl className="my-4 mx-auto w-2/3 lg:w-1/3">
           <dt>名前</dt>
           <dd>ツジ エイジ</dd>
           <dt>年齢</dt>
@@ -56,7 +56,7 @@ export default async function StaticPage() {
             </ul>
           </dd>
         </dl>
-        <div className="text-center">
+        <div className="text-center my-8">
           <Link href={'/'}>TOPへ</Link>
         </div>
       </main>

@@ -13,9 +13,11 @@ export default async function StaticPage({contents}) {
     <div>
       <ul>
         {contents.map((post) => {
+          const date = post.publishedAt.substring(0, post.publishedAt.indexOf("T"))
           return (
             <li className="area-border" key={post.id}>
-              <Link href={`/blog/${post.id}`}>{post.title}</Link>
+              <p className="text-sm mb-2">{date}</p>
+              <Link className="lg:text-xl lg:p-2" href={`/blog/${post.id}`}>{post.title}</Link>
             </li>
           );
         })}
