@@ -23,7 +23,11 @@ export default async function StaticPage({params}) {
       <Header />
       <main className="container m-auto">
         <h1 className="text-center text-3xl my-2 lg:my-8">{post.title}</h1>
-        <p className="text-right text-xl mr-4">{post.publishedAt.substring(0, post.publishedAt.indexOf("T"))}</p>
+        <div className="text-right text-xl mr-4">
+          
+          <p>{post.publishedAt.substring(0, post.publishedAt.indexOf("T"))}</p>
+          <p>{post.category.name}</p>
+        </div>
         <div className="blog-article">{parse(post.content)}</div>
       </main>
     </>
