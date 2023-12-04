@@ -18,7 +18,7 @@ export default async function StaticPage({contents}) {
             <li className="area-border" key={post.id}>
               <div className="text-sm mx-1 mb-2 flex justify-between">
                 <span>{date}</span>
-                <Link className="lg:text-xl lg:p-2" href={`/category/${post.category.id}`}>{post.category.name}</Link>
+                <Link href={`/category/${post.category.id}`}>{post.category.name}</Link>
               </div>
               <Link className="lg:text-xl lg:p-2" href={`/blog/${post.id}`}>{post.title}</Link>
             </li>
