@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Pagenate from "./Pagenate";
 
 export default async function StaticPage({list}) {
   const contents = list.contents;
@@ -26,6 +27,7 @@ export default async function StaticPage({list}) {
           );
         })}
       </ul>
+      <Pagenate list={list} />
     </div>
   );
 }

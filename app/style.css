@@ -6,6 +6,12 @@
   border-radius: .5em;
 }
 
+.pagenate-border {
+  border: black solid 1px;
+  border-radius: .5em;
+  padding: 0 1rem;
+}
+
 .word-search-form input {
   border: black solid 1px;
   border-radius: .5em;
