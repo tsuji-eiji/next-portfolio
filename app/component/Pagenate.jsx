@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { usePathname, useSearchParams  } from 'next/navigation';
 
-const search = useSearchParams();
-const router = usePathname();
+
 
 const generateParams = (searchParams, num) => {
   
@@ -18,6 +17,9 @@ const generateParams = (searchParams, num) => {
 }
 
 export default function StaticPage({list}) {
+
+  const search = useSearchParams();
+  const router = usePathname();
 
   if (list.totalCount < list.limit) {
     return (
@@ -42,7 +44,6 @@ export default function StaticPage({list}) {
         } else {
           return <Link className="mx-4 pagenate-border" key={num} href={{ pathname: router, query: generateParams(search, num) }}>{num}</Link>
         }
-        
       })}
     </div>
   );
