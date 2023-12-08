@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { usePathname, useSearchParams  } from 'next/navigation';
 
+const search = useSearchParams();
+const router = usePathname();
+
 const generateParams = (searchParams, num) => {
   
   let params = [];
@@ -22,8 +25,6 @@ export default function StaticPage({list}) {
     )
   }
 
-  const searchParams = useSearchParams();
-  const router = usePathname();
   const numList = [];
 
   // ページ数を算出
@@ -36,10 +37,10 @@ export default function StaticPage({list}) {
   return (
     <div className="area-border flex justify-center">
       {numList.map((num) => {
-        if (searchParams.get('p') == num || searchParams.get('p') == null && num == 1) {
+        if (search.get('p') == num || search.get('p') == null && num == 1) {
           return <span className="mx-4 bg-gray-600 text-gray-100 pagenate-border" key={num}>{num}</span>
         } else {
-          return <Link className="mx-4 pagenate-border" key={num} href={{ pathname: router, query: generateParams(searchParams, num) }}>{num}</Link>
+          return <Link className="mx-4 pagenate-border" key={num} href={{ pathname: router, query: generateParams(search, num) }}>{num}</Link>
         }
         
       })}
