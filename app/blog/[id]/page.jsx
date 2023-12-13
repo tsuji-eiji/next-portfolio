@@ -21,7 +21,6 @@ export default async function StaticPage({ params }) {
 
   // 目次を作成
   const toc = renderToc(post.content);
-  // console.log(post);
 
   return (
     <>
@@ -33,7 +32,7 @@ export default async function StaticPage({ params }) {
         </div>
         <h1 className="text-center text-3xl my-2 lg:my-8">{post.title}</h1>
         <div>
-          <p className="TableOfContentsHead">目次</p>
+          <p className="TableOfContentsHead">-目次-</p>
           <ul>
             {toc.map((data) => (
               <li key={data.id}>
