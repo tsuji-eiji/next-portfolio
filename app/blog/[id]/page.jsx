@@ -21,7 +21,7 @@ export default async function StaticPage({params}) {
   return (
     <>
       <Header />
-      <main className="container m-auto">
+      <main className="max-w-screen-md container m-auto">
         <div className="text-right text-xl mr-8">
           <p>{post.publishedAt.substring(0, post.publishedAt.indexOf("T"))}</p>
           <p>{post.category.name}</p>
