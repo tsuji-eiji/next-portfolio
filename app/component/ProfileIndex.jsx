@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function StaticPage() {
+export default async function StaticPage({ searchParams }) {
   return (
     <div className="area-border">
-      <h2 className="menu-header">Profile</h2>
+      <h2 className="text-center">プロフィール</h2>
       <div>
         <Image
           src={"/profile.png"}

@@ -20,6 +20,7 @@ export default function StaticPage() {
   return (
     <div className="area-border">
       <form className="word-search-form" method='get' action='/' onSubmit={beforeSubmit}>
+        <h2 className="text-center">ワード検索</h2>
         <input id="q" onChange={inputChange} type="text" />
         <input name="q" type="hidden" />
         <button className="search-icon">

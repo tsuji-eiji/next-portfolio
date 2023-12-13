@@ -18,7 +18,7 @@ export default async function StaticPage() {
 
   return (
     <div className="area-border">
-      <h2 className="menu-header">Category</h2>
+      <h2 className="text-center">カテゴリ一覧</h2>
       <ul className="px-4">
         {categories.map((category) => {
           if (category.parent === null) {
