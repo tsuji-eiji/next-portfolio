@@ -8,7 +8,7 @@ export default async function StaticPage() {
 
   return (
     <div className="area-border">
-      <h2 className="text-center">月別</h2>
+      <h2 className="menu-header">Archive</h2>
       <ul>
           {Object.keys(monthlyArchives).map((index) => {
             return (
