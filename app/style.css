@@ -52,7 +52,36 @@ dl {
   }
 }
 
-/* ブログ記事詳細ページ */
+/* ブログ記事詳細ページ(目次) */
+.toc {
+  background: #f5f5f5;
+}
+
+.toc ul li {
+  border-bottom: 1px black dotted;
+}
+
+.toc ul li a {
+  display: block;
+}
+
+.toc ul li .h2 {
+  margin-left: 1rem;
+}
+
+.toc ul li .h3 {
+  margin-left: 2rem;
+}
+
+.toc ul li .h4 {
+  margin-left: 3rem;
+}
+
+.toc ul li .h5 {
+  margin-left: 4rem;
+}
+
+/* ブログ記事詳細ページ(記事) */
 .blog-article {
 
   padding: .5rem;

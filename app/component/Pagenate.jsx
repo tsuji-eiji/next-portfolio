@@ -40,7 +40,7 @@ export default function StaticPage({list}) {
     <div className="area-border flex justify-center">
       {numList.map((num) => {
         if (search.get('p') == num || search.get('p') == null && num == 1) {
-          return <span className="mx-4 bg-gray-600 text-gray-100 pagenate-border" key={num}>{num}</span>
+          return <span className="mx-4 px-4" key={num}>{num}</span>
         } else {
           return <Link className="mx-4 pagenate-border" key={num} href={{ pathname: router, query: generateParams(search, num) }}>{num}</Link>
         }
