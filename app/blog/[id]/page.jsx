@@ -26,17 +26,19 @@ export default async function StaticPage({ params }) {
     <>
       <Header />
       <main className="p-8 lg:max-w-screen-md container m-auto">
-        <div className="text-right text-xl mr-8">
+        <h1 className="text-center text-3xl py-2 lg:py-8">{post.title}</h1>
+        <div className="text-right lg:text-xl mr-8">
           <p>{post.publishedAt.substring(0, post.publishedAt.indexOf("T"))}</p>
           <p>{post.category.name}</p>
         </div>
-        <h1 className="text-center text-3xl my-2 lg:my-8">{post.title}</h1>
-        <div className="toc w-3/4 p-4 my-4 mx-auto">
+        <div className="toc lg:w-3/4 p-4 my-4 mx-auto">
           <p className="TableOfContentsHead text-center">-目次-</p>
           <ul>
             {toc.map((data) => (
               <li className="mt-2" key={data.id}>
-                <a className={data.name} href={`#${data.id}`}>{data.text}</a>
+                <a className={data.name} href={`#${data.id}`}>
+                  {data.text}
+                </a>
               </li>
             ))}
           </ul>

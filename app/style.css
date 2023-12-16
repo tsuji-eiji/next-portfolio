@@ -2,8 +2,17 @@
 .area-border {
   margin: 1em;
   padding: .5em;
-  border: black solid 1px;
+  border: #1f1e63 solid 1px;
   border-radius: .5em;
+}
+
+.main-color {
+  background: #dcd5c8;
+  color: #1f1e63;
+}
+
+.sub-color {
+  background: #dcd5c8;
 }
 
 .pagenate-border {
@@ -17,6 +26,7 @@
   border-radius: .5em;
   padding: .25em;
   width: 100%;
+  background: #dfdad0;
 }
 
 .word-search-form {
@@ -54,7 +64,8 @@ dl {
 
 /* ブログ記事詳細ページ(目次) */
 .toc {
-  background: #f5f5f5;
+  background: #c4c4cd;
+  color: #222;
 }
 
 .toc ul li {
@@ -88,31 +99,36 @@ dl {
 
   & h1 {
     font-size: 1.8rem;
-    margin: .5rem 0 1rem;
-    text-decoration: underline;
+    margin: .5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
   }
 
   & h2 {
     font-size: 1.6rem;
-    margin: .5rem 0 1rem;
-    text-decoration: underline;
+    margin: .5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
   }
 
   & h3 {
     font-size: 1.4rem;
-    margin: .5rem 0 1rem;
-    text-decoration: underline;
+    margin: .5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
   }
 
   & h4 {
     font-size: 1.2rem;
-    margin: .5rem 0 1rem;
-    text-decoration: underline;
+    margin: .5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
   }
 
   & h5 {
-    margin: .5rem 0 1rem;
-    text-decoration: underline;
+    margin: .5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
   }
 
   & pre,
