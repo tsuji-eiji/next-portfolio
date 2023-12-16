@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import Header from "../../component/Header";
+import Toc from "../../component/Toc";
 import { getDetail } from "../../../lib/microcms";
 import { renderToc } from "../../../lib/util";
 
@@ -31,18 +32,7 @@ export default async function StaticPage({ params }) {
           <p>{post.publishedAt.substring(0, post.publishedAt.indexOf("T"))}</p>
           <p>{post.category.name}</p>
         </div>
-        <div className="toc lg:w-3/4 p-4 my-4 mx-auto">
-          <p className="TableOfContentsHead text-center">-目次-</p>
-          <ul>
-            {toc.map((data) => (
-              <li className="mt-2" key={data.id}>
-                <a className={data.name} href={`#${data.id}`}>
-                  {data.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Toc toc={toc} />
         <div className="blog-article">{parse(post.content)}</div>
       </main>
     </>

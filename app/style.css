@@ -99,36 +99,36 @@ dl {
 
   & h1 {
     font-size: 1.8rem;
-    margin: .5rem 0;
+    margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1f1e63;
   }
 
   & h2 {
     font-size: 1.6rem;
-    margin: .5rem 0;
+    margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1f1e63;
   }
 
   & h3 {
     font-size: 1.4rem;
-    margin: .5rem 0;
+    margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1f1e63;
   }
 
   & h4 {
     font-size: 1.2rem;
-    margin: .5rem 0;
+    margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1f1e63;
   }
 
   & h5 {
-    margin: .5rem 0;
+    margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1f1e63;
   }
 
   & pre,

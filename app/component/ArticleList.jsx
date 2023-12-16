@@ -5,7 +5,7 @@ export default async function StaticPage({list}) {
   const contents = list.contents;
   if (!contents || contents.length === 0) {
     return (
-      <div>
+      <div className="text-center">
         <h2>記事が存在しません</h2>
       </div>
     );
