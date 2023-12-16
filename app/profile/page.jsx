@@ -52,7 +52,7 @@ export default async function StaticPage() {
             <ul>
               <li>ゲーム</li>
               <li>プロレス観戦</li>
-              <li>ギター</li>
+              <li>ギター・ベース演奏</li>
             </ul>
           </dd>
         </dl>
