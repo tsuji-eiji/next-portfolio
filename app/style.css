@@ -98,10 +98,11 @@ dl {
   padding: .5rem;
 
   & h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    padding-left: .5rem;
     margin: 1.5rem 0 .5rem;
     display: inline-block;
-    border-bottom: 2px solid #1f1e63;
+    border-left: .3rem solid #1f1e63;
   }
 
   & h2 {
@@ -162,6 +163,14 @@ dl {
   & a {
     color: rgb(0, 165, 248);
     text-decoration: underline;
+  }
+
+  & div {
+    margin: 2rem 0;
+  }
+
+  & figure {
+    margin: 2rem 0;
   }
 
   & img {
