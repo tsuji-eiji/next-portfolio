@@ -1,30 +1,19 @@
 import Link from "next/link";
 import { getCategories } from "../../lib/microcms";
 
-export default async function StaticPage() {
-  // 全カテゴリを抽出
-  let categories = [];
-  const all = await getCategories();
-  const parents = all.filter((category) => category.parent === null)
+export default async function CategoryLinks() {
+  const categories = await getCategories();
   
-  parents.forEach((parent) => {
-    categories.push(parent);
-    all.forEach(element => {
-      if (element.parent !== null && element.parent.id === parent.id) {
-        categories.push(element);
-      }
-    });
-  })
-
   return (
     <div className="area-border">
       <h2 className="menu-header">Category</h2>
       <ul className="px-4">
-        {categories.map((category) => {
-          if (category.parent === null) {
+        {categories.map((category, index) => {
+          if (index === 0 || category.ganre[0] !== categories[index-1].ganre[0]) {
             return (
               <li key={category.id}>
-                <p>{category.name}</p>
+                <p>{category.ganre[0]}</p>
+                <Link className="ml-4" href={`/category/${category.id}`}>{category.name}</Link>
               </li>
             );
           } else {
